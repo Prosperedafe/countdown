@@ -1,0 +1,80 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: sans-serif, Arial, Helvetica, sans-serif;
+}
+
+.container {
+    width: 100%;
+    min-height: 100vh;
+    background: hsl(213, 92%, 25%);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.content {
+    color: #fff;
+    text-align: center;
+    padding: 0 1rem;
+}
+
+.content h1 {
+    font-size: clamp(1.5rem, 6vw, 5rem);
+    font-weight: 500;
+}
+
+.content>P {
+    font-size: 2rem;
+    margin-bottom: .5rem;
+}
+
+.rocket {
+    width: 150px;
+    position: absolute;
+    right: 10%;
+    bottom: 0;
+    animation: rocket 4s linear infinite;
+}
+
+.btns {
+    height: 6rem;
+    width: 6rem;
+    border-radius: 50%;
+    border: none;
+    color: hsl(213, 92%, 25%);
+    font-size: 1.5rem;
+    background: hsl(0, 0%, 90%);
+    display: block;
+    margin: auto;
+    margin-bottom: 1rem;
+}
+
+.launch-time {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 1rem;
+    margin-top: 2rem;
+}
+
+.launch-time>div {
+    text-align: center;
+    flex-basis: 100px;
+    flex-grow: 1;
+    width: fit-content;
+    justify-content: center;
+}
+
+@keyframes rocket {
+    0% {
+        bottom: 0;
+        opacity: 0;
+    }
+
+    100% {
+        bottom: 105%;
+        opacity: .7;
+    }
+}
